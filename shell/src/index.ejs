@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Single Spa with Federation</title>
+  <meta name="importmap-type" content="systemjs-importmap" />
+
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "shell": "http://localhost:9000/root-config.js",
+        "vue2-main": "http://localhost:8081/js/app.js"
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
+</head>
+<body style="margin: 2rem 5rem">
+  <script>
+    System.import('shell');
+  </script>
+  <div id="test"></div>
+</body>
+</html>
