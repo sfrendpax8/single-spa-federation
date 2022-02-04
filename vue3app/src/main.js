@@ -1,8 +1,21 @@
 import { h, createApp } from 'vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import singleSpaVue from 'single-spa-vue';
-import something from 'library';
+import library from 'library';
 
 import App from './App.vue';
+
+const Home = { template: '<div>Home</div>' }
+const About = { template: '<div>About</div>' }
+
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes: [
+    { path: '/', component: Home },
+    { path: '/about', component: About },
+  ]
+})
+
 
 const vueLifecycles = singleSpaVue({
   createApp,
@@ -12,7 +25,8 @@ const vueLifecycles = singleSpaVue({
     },
   },
   handleInstance: (app) => {
-    app.use(something);
+    app.use(router);
+    app.use(library);
   }
 });
 

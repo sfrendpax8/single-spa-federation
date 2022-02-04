@@ -4,7 +4,7 @@ const projectName = 'vue2-main'; // can probably retrieve through script or pack
 module.exports = {
   configureWebpack: {
     output: {
-      // filename: `js/${projectName}.js`,
+      filename: `js/${projectName}.js`,
       devtoolNamespace: projectName,
     },
     externals: ['vue', 'vue-router'],

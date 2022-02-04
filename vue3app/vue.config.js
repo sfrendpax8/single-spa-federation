@@ -4,10 +4,9 @@ const projectName = 'vue3app'; // can probably retrieve through script or packag
 module.exports = {
   configureWebpack: {
     output: {
-      // filename: `js/${projectName}.js`,
+      filename: `js/${projectName}.js`,
       devtoolNamespace: projectName,
     },
-    externals: [],
     // externals: [],
   },
   // chainWebpack: config => {

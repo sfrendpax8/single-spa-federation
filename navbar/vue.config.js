@@ -4,7 +4,7 @@ const projectName = 'navbar'; // can probably retrieve through script or package
 module.exports = {
   configureWebpack: {
     output: {
-      // filename: `js/${projectName}.js`,
+      filename: `js/${projectName}.js`,
       devtoolNamespace: projectName,
     },
     externals: ['vue', 'vue-router'],
