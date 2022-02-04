@@ -1,5 +1,5 @@
 import { h, createApp } from 'vue'
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import singleSpaVue from 'single-spa-vue';
 import library from 'library';
 
@@ -9,7 +9,7 @@ const Home = { template: '<div>Home</div>' }
 const About = { template: '<div>About</div>' }
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: [
     { path: '/', component: Home },
     { path: '/about', component: About },
