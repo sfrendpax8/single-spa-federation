@@ -5,11 +5,13 @@
     <input type="text" v-model="searchInput"/>
     <p>Vue3App: {{ searchInput }}</p>
     <steve-select />
+    <something />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import { Select as something } from 'library';
 
 const searchInput = ref('');
 </script>

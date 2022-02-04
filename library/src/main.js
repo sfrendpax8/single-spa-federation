@@ -25,5 +25,5 @@ export default {
 };
 
 // Export programatic components
-// export { Select } from './Select.vue';
+export { Select };
 
