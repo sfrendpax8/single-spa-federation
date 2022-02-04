@@ -4,3 +4,7 @@
 # local env files
 **/.env.local
 **/.env.*.local
+
+**/*.tgz
+**/*.DS_Store
+**/TODO.md

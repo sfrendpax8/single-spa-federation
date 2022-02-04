@@ -4,6 +4,7 @@
 
     <input type="text" v-model="searchInput"/>
     <p>Vue3App: {{ searchInput }}</p>
+    <steve-select />
   </div>
 </template>
 
