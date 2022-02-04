@@ -7,7 +7,7 @@ module.exports = {
       // filename: `js/${projectName}.js`,
       devtoolNamespace: projectName,
     },
-    externals: [],
+    externals: ['vue', 'vue-router'],
   },
 
   devServer: {
