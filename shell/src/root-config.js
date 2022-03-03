@@ -1,9 +1,15 @@
 import { registerApplication, start } from "single-spa";
 
-registerApplication(
-  'vue3app',
-  () => import('vue3app/App'),
-  (location) => location.pathname.startsWith('/'),
-)
+registerApplication({
+  name: 'vue3app',
+  app: () => import('vue3app/App'),
+  activeWhen: '/vue3',
+});
+
+registerApplication({
+  name: 'vue2app',
+  app: () => import('vue2app/App'),
+  activeWhen: '/',
+})
 
 start();
