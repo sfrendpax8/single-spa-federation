@@ -10,10 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "library": "file:../library/library-0.1.0.tgz",
-    "lodash": "^4.17.21",
-    "single-spa-vue": "^2.5.1",
-    "systemjs-webpack-interop": "^2.3.7"
+    "single-spa-vue": "^2.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

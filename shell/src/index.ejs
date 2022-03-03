@@ -5,27 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Single Spa with Federation</title>
-  <meta name="importmap-type" content="systemjs-importmap" />
+  <!-- <meta name="importmap-type" content="systemjs-importmap" /> -->
 
-  <script type="systemjs-importmap">
+  <script src="http://localhost:8082/remoteEntry.js"></script>
+
+  <!-- <script type="systemjs-importmap">
     {
       "imports": {
-        "shell": "http://localhost:9000/root-config.js",
-        "navbar": "http://localhost:8083/js/navbar.js",
-        "vue3app": "http://localhost:8082/js/vue3app.js",
-        "vue2-main": "http://localhost:8081/js/vue2-main.js",
-        "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js",
-        "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.5.3/dist/vue-router.min.js"
+        "shell": "http://localhost:9000/root-config.js"
       }
     }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
+  </script> -->
+        <!-- "vue3app": "http://localhost:8082/remoteEntry.js" -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script> -->
 </head>
 <body style="margin: 2rem 5rem">
   <script>
-    System.import('shell');
+    // System.import('shell');
   </script>
-  <div id="test"></div>
+  <!-- <div id="app"></div> -->
+  <div id="single-spa-application:vue3app"></div>
 </body>
 </html>
