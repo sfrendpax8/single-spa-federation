@@ -1,13 +1,14 @@
 <template>
   <div id="navbar">
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link to="/vue3">Vue3</router-link>
+    <p>Navbar. I'm just a Vue2 App</p>
   </div>
 </template>
 
 <style>
 #navbar {
-  background: lightgreen;
+  display: grid;
+  place-items: center;
+  background: #d3d3d3;
+  border: 2px solid darkgray;
 }
 </style>

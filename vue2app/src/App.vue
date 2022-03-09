@@ -28,7 +28,6 @@ export default {
 
 <style>
 #vue2app {
-  background: lightblue;
   height: 100%;
   overflow: hidden;
   padding: var(--contentPadding);

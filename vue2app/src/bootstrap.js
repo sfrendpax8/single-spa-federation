@@ -5,16 +5,11 @@ import singleSpaVue from 'single-spa-vue';
 
 Vue.config.productionTip = false
 
-/* eslint-disable */
 const vueLifecycles = singleSpaVue({
   Vue,
   appOptions: {
     render(h) {
-      return h(App, {
-        props: {
-          navigateToUrl: this.navigateToUrl,
-        },
-      });
+      return h(App);
     },
     router,
     el: '.main-content',
