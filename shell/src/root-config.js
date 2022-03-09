@@ -1,4 +1,20 @@
-import { registerApplication, start } from "single-spa";
+import { registerApplication, navigateToUrl, start } from "single-spa";
+
+const defaultProps = {
+  navigateToUrl,
+}
+
+registerApplication({
+  name: 'navbar',
+  app: () => import('navbar/App'),
+  activeWhen: '/',
+})
+
+registerApplication({
+  name: 'sidebar',
+  app: () => import('sidebar/App'),
+  activeWhen: '/',
+})
 
 registerApplication({
   name: 'vue3app',
@@ -9,7 +25,8 @@ registerApplication({
 registerApplication({
   name: 'vue2app',
   app: () => import('vue2app/App'),
-  activeWhen: '/',
+  activeWhen: '/vue2',
+  customProps: defaultProps,
 })
 
 start();

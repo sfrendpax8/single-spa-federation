@@ -8,7 +8,45 @@
 
   <script src="http://localhost:8082/remoteEntry.js"></script>
   <script src="http://localhost:8083/remoteEntry.js"></script>
+  <script src="http://localhost:8084/remoteEntry.js"></script>
+  <script src="http://localhost:8085/remoteEntry.js"></script>
 </head>
-<body style="margin: 2rem 5rem">
+<body>
+  <style>
+    :root {
+      --contentPadding: 1rem;
+    }
+
+    #app-content {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 3fr 9fr;
+      grid-template-rows: 1fr 11fr;
+      grid-template-areas:
+      "sidebar navbar"
+      "sidebar content";
+    }
+
+    #navbar {
+      grid-area: navbar;
+      padding: var(--contentPadding);
+    }
+
+    #sidebar {
+      grid-area: sidebar;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      padding: var(--contentPadding);
+    }
+
+    .main-content {
+      grid-area: content;
+    }
+  </style>
+  <div id="app-content">
+    <div class="main-content"></div>
+  </div>
 </body>
 </html>

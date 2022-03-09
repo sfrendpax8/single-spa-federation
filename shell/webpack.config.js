@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, "src/root-config"),
+  entry: path.resolve(__dirname, "src/bootstrap"),
   cache: false,
   output: {
     filename: "root-config.js",
@@ -16,6 +16,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [{ loader: "babel-loader" }],
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
@@ -37,8 +41,10 @@ module.exports = {
       remotes: {
         vue3app: 'vue3app',
         vue2app: 'vue2app',
+        navbar: 'navbar',
+        sidebar: 'sidebar',
       },
-      shared: []
+      shared: ['single-spa']
     }),
     new HtmlWebpackPlugin({
       template: "src/index.ejs",

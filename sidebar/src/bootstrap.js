@@ -1,23 +1,23 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
 import singleSpaVue from 'single-spa-vue';
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
-/* eslint-disable */
 const vueLifecycles = singleSpaVue({
   Vue,
   appOptions: {
     render(h) {
-      return h(App, {
-        props: {
-          navigateToUrl: this.navigateToUrl,
-        },
-      });
+      return h(App);
     },
-    router,
-    el: '.main-content',
+    router: new VueRouter({
+      mode: 'history',
+      routes: [],
+    }),
+    el: '#app-content',
   },
 });
 
